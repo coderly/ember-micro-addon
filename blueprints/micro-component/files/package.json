@@ -1,12 +1,12 @@
 {
   "name": "<%= componentName %>",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An ember-cli micro-component",
   "repository": "",
   "engines": {
     "node": ">= 0.10.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon", "ember-micro-addon", "ember-micro-component"
   ]
 }
