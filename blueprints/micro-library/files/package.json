@@ -1,0 +1,17 @@
+{
+  "name": "<%= libraryName %>",
+  "version": "0.0.0",
+  "description": "An ember-cli micro-library",
+  "repository": "",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "broccoli-funnel": "^0.2.3"
+  },
+  "keywords": [
+    "ember-addon",
+    "ember-micro-addon",
+    "ember-micro-library"
+  ]
+}
