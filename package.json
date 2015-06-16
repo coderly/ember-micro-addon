@@ -49,6 +49,7 @@
   "preferGlobal": "true",
   "bin": {
     "ember-micro:hello": "lib/cli/hello.js",
-    "ember-micro:component": "lib/cli/component.js"
+    "ember-micro:component": "lib/cli/component.js",
+    "ember-micro:library": "lib/cli/library.js"
   }
 }
