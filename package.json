@@ -45,5 +45,12 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "ember-micro:hello": "lib/cli/hello.js",
+    "ember-micro:component": "lib/cli/component.js",
+    "ember-micro:library": "lib/cli/library.js",
+    "ember-micro:helper": "lib/cli/helper.js"
   }
 }
