@@ -26,13 +26,17 @@ Thanks to the contents of `index.js` this addon can be installed and used from a
 
 # Usage
 
-Currently, ember-micro-addon is not supported as a global command. Instead, the user is required to initialize an npm package and install the addon as a dependency into that folder.
+Currently, ember-micro-addon can be used as a locally installed ember-addon, or as a locally and/or globally installed plain npm package.
+
+## Usage as ember addon
+
+Install it in a working folder
 
 * `mkdir working_folder`
 * `cd working_folder`
 * `npm install --save-dev ember-micro-addon
 
-Ȯnce these 3 steps are done, the `ember micro` command set is available. There are several commands it supports:
+Once these 3 steps are done, the `ember micro:x` command set is available. There are several commands it supports:
 
 * `ember micro:component addon-name` creates a component micro-addon folder containing files listed in the previous section
 * `ember micro:library addon-name` creates a library micro-addon
@@ -44,4 +48,20 @@ Currently, ember-micro-addon is not supported as a global command. Instead, the 
   * `style.css` goes to `addon/styles` so it gets merged into `vendor.css`
   * `helper.js` goes to `app/helpers
   * `library.js` goes to `app/lib`
+
+## Usage as a plain npm package (preferred)
+
+Install it in a working folder, or, preferably, as a global npm package:
+
+* `npm install -g ember-micro-addon`
+
+Once the package is installed globally, the `ember-micro:x` command set is available **from any location**. Note the added dash compared to the case of using it as an `ember-addon`
+
+The command set behaves in the same way as the `ember micro:x` command set. The available commands are:
+
+* `ember-micro:component addon-name`
+* `ember-micro:library addon-name`
+* `ember-micro:helper addon-name`
+* `ember-micro:build addon-name`
+
 
