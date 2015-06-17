@@ -51,6 +51,7 @@
     "ember-micro:component": "lib/cli/component.js",
     "ember-micro:library": "lib/cli/library.js",
     "ember-micro:helper": "lib/cli/helper.js",
-    "ember-micro:build": "lib/cli/build.js"
+    "ember-micro:build": "lib/cli/build.js",
+    "ember-micro:extract": "lib/cli/extract.js"
   }
 }
