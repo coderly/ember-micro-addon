@@ -42,6 +42,7 @@
     "fs-extra": "^0.19.0",
     "github": "^0.2.4",
     "lodash": "^3.9.3",
+    "node-persist": "0.0.4",
     "nodegit": "^0.4.1",
     "prompt": "^0.2.14",
     "rsvp": "^3.0.18"
