@@ -78,13 +78,26 @@ If we ever want to convert our addon to a proper ember-addon structure, we can s
 
 # Example: Extracting a component from an Ember-CLI application
 
-Let's assume we have an ember app located at `~git/my-ember-app`. Within that app, there is a small custom button component called `my-button`. We want to quickly extract it into a micro addon.
+Let's assume we have an ember app located at `~git/my-ember-app`. Within that app, there is a small custom button component called `my-button`. We want to **quickly extract it into a micro addon**.
 
-From the app folder, we execute `ember-micro:extract component my-button` and that's it. There is now a new folder, `~/git/my-button` containing the component structured as a micro addon. We can now include that micro-addon in our app as a dependency, and it will work. We can do this by either linking the folder using `npm link`, or by installing the addon from a local folder using `npm install ~/git/my-button`.
+From the app folder, we execute `ember-micro:extract component my-button` and that's it.
 
-We can also go a step further and publish the addon to GitHub.
+There is now a new folder, `~/git/my-button` containing the component structured as a micro addon.
 
-We move to the parent folder, `~/git/` and execute `ember-micro:publish my-button`. We will be prompted for our GitHub username and password and a few seconds later, the addon will be published under our username to GitHub.
+It contains
+* `index.js` - the addon's entry file. Works the same way as it does with a regular ember addon, except it contains some special hooks which make it work in an app with the custom, flat file structure.
+* `component.js`
+* `template.hbs`
+* `style.css`
+
+
+We can now include that micro-addon in our app as a dependency, and it will work. We can do this by either 
+* linking the folder using [`npm link`](https://docs.npmjs.com/cli/link), 
+* installing the addon from a local folder using `npm install ~/git/my-button`
+
+We can also go a step further and **publish the addon to GitHub**.
+
+For that, we move to the parent folder, `~/git/` and execute `ember-micro:publish my-button`. We will be prompted for our GitHub username and password and a few seconds later, the addon will be published under our username to GitHub.
 
 # General instructions
 
