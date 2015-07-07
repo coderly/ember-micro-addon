@@ -68,7 +68,7 @@ The structure is not conventional but it _just works_ out of the box.
 
 ### Publish the micro-addon as a git repository on GitHub
 
-What if we want to quickly make our addon availabe online somewhere?
+What if we want to quickly make our addon available online somewhere?
 
 We position ourselves to `~/git/` and run `ember-micro:publish my-component`. We will get prompted for our GitHub credentials and within seconds, our addon will become a proper local git repository and then get pushed to a remote repository of the same name on our GitHub account. It is now available for everyone to use.
 
@@ -76,14 +76,23 @@ We position ourselves to `~/git/` and run `ember-micro:publish my-component`. We
 
 If we ever want to convert our addon to a proper ember-addon structure, we can still do it. We simply move to `~/git` where our addon folder currently is and we run `ember-micro:build my-component`. A new folder will be created, `~git/my-component/dist` containing our addon in the conventional ember addon format, with all files in their proper place.
 
+# Example: Extracting a component from an Ember-CLI application
 
-# Usage
+Let's assume we have an ember app located at `~git/my-ember-app`. Within that app, there is a small custom button component called `my-button`. We want to quickly extract it into a micro addon.
 
-Install it in a working folder, or, preferably, as a global npm package:
+From the app folder, we execute `ember-micro:extract component my-button` and that's it. There is now a new folder, `~/git/my-button` containing the component structured as a micro addon. We can now include that micro-addon in our app as a dependency, and it will work. We can do this by either linking the folder using `npm link`, or by installing the addon from a local folder using `npm install ~/git/my-button`.
+
+We can also go a step further and publish the addon to GitHub.
+
+We move to the parent folder, `~/git/` and execute `ember-micro:publish my-button`. We will be prompted for our GitHub username and password and a few seconds later, the addon will be published under our username to GitHub.
+
+# General instructions
+
+Install the npm package in a working folder, or, globally, which is preferred:
 
 * `npm install -g ember-micro-addon`
 
-Once the package is installed globally, the `ember-micro:x` command set is available **from any location**. 
+Once the package is installed globally, the `ember-micro:x` command set is available **from any location**.
 
 The available commands are:
 
@@ -91,7 +100,7 @@ The available commands are:
 * `ember-micro:component addon-name` creates a component micro-addon folder containing files listed in the previous section
 * `ember-micro:library addon-name` creates a library micro-addon
 * `ember-micro:helper addon-name` creates a helper micro-addon
-* `ember-micro:build addon-name` copies files from the `addon-name` folder into the folder `addon-name/dist`. Files are copied in a way that complies with the default ember-addon filestructure:
+* `ember-micro:build addon-name` copies files from the `addon-name` folder into the folder `addon-name/dist`. Files are copied in a way that complies with the default ember-addon file structure:
   * `index.js` and `package.json` go to the root,
   * `component.js` goes to `app/components`,
   * `template.hbs` goes to `app/templates/components`,
