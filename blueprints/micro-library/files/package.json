@@ -6,9 +6,6 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "dependencies": {
-    "broccoli-funnel": "^0.2.3"
-  },
   "keywords": [
     "ember-addon",
     "ember-micro-addon",
