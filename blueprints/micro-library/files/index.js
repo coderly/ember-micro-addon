@@ -7,8 +7,9 @@ var Funnel = require('broccoli-funnel');
 module.exports = {
   name: '<%= libraryName %>',
 
-  treeForApp: function() {
-    return this.buildTree(this.root, ['library.js']);
+  treeForAddon: function() {
+    var addonTree = this.buildTree(this.root, ['library.js']);
+    return this.compileAddon(addonTree);
   },
 
   buildTree: function(sourceTree, includedFiles) {
